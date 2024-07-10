@@ -4,7 +4,7 @@ import seaborn as sns
 sns.set()
 
 
-elev_data = pd.read_csv('/Users/houssam/Downloads/Fahrtdaten.csv')
+elev_data = pd.read_csv('./Fahrtdaten.csv')
 
 elev_data['ts'] = pd.to_datetime(elev_data['ts'], unit='ms')
 elev_data['date'] = elev_data['ts'].dt.date
@@ -32,15 +32,7 @@ plt.ylabel("Number of trips")
 plt.show()
 
 
-# Identify irregularities
-
-#df['distance'].plot(kind='box')
-#plt.title('Distribution of Ride Distances')
-#plt.show()
-
-
-
-
+# Irrehularities Analysis 
 
 #max_distance = elev_data['distance'].max()
 #print(max_distance)
