@@ -7,15 +7,18 @@ implementation of an API that reads elevator data from a csv file, plus analysis
 - Python 3.9+
 - pip
 
-### Install the dependencies:
+### If you want to Install the dependencies locally:
 - pip install -r requirements.txt
 
 ## Usage 
 
-- Build and run the container according to the Dockerfile
-- Run the Application : uvicorn main:app --reload --port 12345
+- to use the app pull the docker container with the command:
+- docker pull houssamwees/app_docker_2
 - Access the API documentation at:
-     Swagger UI: `http://127.0.0.1:12345/docs`
+     Swagger UI: `http://0.0.0.0:12345/docs`
+- run the docker container with the command:  
+   docker run -p 12345:12345 houssamwees/app_docker_2:latest
+
 
 - **Request**:
     ```http
@@ -31,3 +34,5 @@ implementation of an API that reads elevator data from a csv file, plus analysis
         "2021-05-04": 125,
         "2021-05-05": 167
       },
+
+- 
