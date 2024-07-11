@@ -25,7 +25,7 @@ class TestFastAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 422)  
 
     def test_hello_world(self):
-        response = client.get("/hello")
+        response = client.get("/")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json(), {"message": "Hello, World!"})
 
